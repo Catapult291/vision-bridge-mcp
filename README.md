@@ -28,7 +28,7 @@ Exception: when the system clipboard has an image and the conversation has no pa
 - ✅ **Safety limits**: 16MB response / 20MB image / 1MB error detail
 - ✅ **Typed errors**: `VisionInputError` / `VisionApiError` / `VisionTimeoutError`
 - ✅ **Comprehensive tests**: 30+ unit tests + end-to-end smoke tests
-- ✅ **Zero new npm dependencies** (uses workspace `node_modules`)
+- ✅ **Minimal dependencies**: only `@modelcontextprotocol/sdk` + `zod` (declared in `package.json`)
 
 ## Quick Start
 

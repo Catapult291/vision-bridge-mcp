@@ -32,5 +32,12 @@
   },
   "scripts": {
     "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

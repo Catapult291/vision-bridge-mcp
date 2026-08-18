@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -14,7 +15,7 @@ try {
   process.exit(1);
 }
 
-const server = new McpServer({ name: "vision-bridge-mcp", version: "0.2.0" });
+const server = new McpServer({ name: "vision-bridge-mcp", version: "0.1.0" });
 
 // Unified error wrapper: returns text on success, isError-marked text on failure
 async function safeCall(fn) {
