@@ -3,6 +3,8 @@
 > Vision sidecar MCP server — gives text-only LLMs the ability to see images.
 > Supports **OpenAI AND Anthropic** API formats natively. Includes model-capability routing skill.
 
+[![CI](https://github.com/Catapult291/vision-bridge-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Catapult291/vision-bridge-mcp/actions/workflows/ci.yml)
+
 ## Why?
 
 Most LLMs are text-only — they cannot see images. This MCP server bridges that gap by forwarding images to a vision-capable model and returning text results. It works with any OpenAI-compatible or Anthropic-compatible API endpoint.
@@ -125,7 +127,7 @@ The `vision-sidecar` skill provides model-capability routing. When enabled in yo
 
 Without the skill, the host model's behavior is completely unchanged — zero intrusion.
 
-See `skill/vision-sidecar.md` for the skill file.
+See [`skill/vision-sidecar.md`](https://github.com/Catapult291/vision-bridge-mcp/blob/main/skill/vision-sidecar.md) for the skill file.
 
 ## Caching
 
@@ -150,7 +152,9 @@ node --test
 
 ## Comparison with Other Vision MCPs
 
-See [docs/COMPARISON.md](docs/COMPARISON.md) for a detailed comparison with other vision MCP projects.
+See [docs/COMPARISON.md](https://github.com/Catapult291/vision-bridge-mcp/blob/main/docs/COMPARISON.md) for a detailed comparison with other vision MCP projects.
+
+For a deep dive into the internals — data flow, input normalization, dual-protocol message construction, URL retry, and caching — see [docs/ARCHITECTURE.md](https://github.com/Catapult291/vision-bridge-mcp/blob/main/docs/ARCHITECTURE.md).
 
 ## License
 

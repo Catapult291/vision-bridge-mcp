@@ -25,7 +25,8 @@
   "files": [
     "server.js",
     "lib/",
-    "scripts/"
+    "scripts/",
+    "skill/"
   ],
   "bin": {
     "vision-bridge-mcp": "server.js"
