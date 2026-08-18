@@ -1,0 +1,36 @@
+{
+  "name": "vision-bridge-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Vision sidecar MCP server — gives text-only LLMs the ability to see images. Supports OpenAI AND Anthropic API formats.",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "vision",
+    "image-recognition",
+    "ocr",
+    "multimodal",
+    "llm",
+    "anthropic",
+    "openai",
+    "model-context-protocol",
+    "sidecar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Catapult291/vision-bridge-mcp.git"
+  },
+  "homepage": "https://github.com/Catapult291/vision-bridge-mcp",
+  "bugs": "https://github.com/Catapult291/vision-bridge-mcp/issues",
+  "files": [
+    "server.js",
+    "lib/",
+    "scripts/"
+  ],
+  "bin": {
+    "vision-bridge-mcp": "server.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
