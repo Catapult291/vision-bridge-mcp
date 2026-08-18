@@ -34,6 +34,8 @@ Exception: when the system clipboard has an image and the conversation has no pa
 
 ## Quick Start
 
+### Option A: npx (npm package)
+
 1. Ensure `node` ≥ 18 is in your PATH.
 2. Set environment variables:
 
@@ -50,9 +52,8 @@ export VISION_MODEL=gpt-4o                               # Vision model name
 {
   "id": "vision-bridge-mcp",
   "transport": "stdio",
-  "command": "node",
-  "args": ["server.js"],
-  "cwd": "/path/to/vision-bridge-mcp",
+  "command": "npx",
+  "args": ["vision-bridge-sidecar"],
   "env": {
     "VISION_API_BASE_URL": "https://api.example.com/v1",
     "VISION_API_KEY": "your-key",
@@ -61,6 +62,16 @@ export VISION_MODEL=gpt-4o                               # Vision model name
   "enabled": true
 }
 ```
+
+### Option B: from source
+
+```bash
+git clone https://github.com/Catapult291/vision-bridge-mcp.git
+cd vision-bridge-mcp
+npm install
+```
+
+Register with `command: "node"`, `args: ["server.js"]`, `cwd: "/path/to/vision-bridge-mcp"`.
 
 ## Configuration
 

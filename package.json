@@ -1,5 +1,5 @@
 {
-  "name": "vision-bridge-mcp",
+  "name": "vision-bridge-sidecar",
   "version": "0.1.0",
   "type": "module",
   "description": "Vision sidecar MCP server — gives text-only LLMs the ability to see images. Supports OpenAI AND Anthropic API formats.",
@@ -29,7 +29,7 @@
     "skill/"
   ],
   "bin": {
-    "vision-bridge-mcp": "server.js"
+    "vision-bridge-sidecar": "server.js"
   },
   "scripts": {
     "test": "node --test"

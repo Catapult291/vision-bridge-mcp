@@ -103,14 +103,14 @@ Legend: ✅ supported · ❌ not supported · ⚠️ partial/different approach 
 | **Free vision backend** | clipboard-vision-mcp | Groq free tier + Qwen 27B; vision-bridge requires your own API key. |
 | **Multi-provider presets** | luma-mcp, ghbalf, Dellety | vision-bridge requires manually filling base_url / model / key. |
 | **Security hardening** | Pelican0126, luma-mcp | path allowlist + SSRF checks on URL download. vision-bridge downloads URLs without SSRF validation (a feature/attack-surface trade-off to document). |
-| **npm/npx install** | luma-mcp, agent-vision, dsh-vision, mcp-openvision | `npx vision-bridge-mcp` not yet possible (Step 8 of the release plan). |
-| **Zero-dependency install** | dsh-vision | vision-bridge needs `@modelcontextprotocol/sdk` + `zod`; **these must be declared in `package.json` before publishing** (currently missing). |
+| **npm/npx install** | luma-mcp, agent-vision, dsh-vision, mcp-openvision | Published as `npx vision-bridge-sidecar` (0.1.0+). npm name differs from the GitHub repo name because `vision-bridge-mcp` was already taken on npm. |
+| **Zero-dependency install** | dsh-vision | vision-bridge needs `@modelcontextprotocol/sdk` + `zod`; both are declared in `package.json` (dependencies + engines since 0.1.0). |
 
 ## 5. Positioning Summary
 
 - **Best fit for**: users behind **non-standard API gateways** (Anthropic-compatible relays, self-hosted proxies) where dual protocol is a hard requirement; **mixed multimodal/text-only model setups** that want capability routing without token waste; **Windows/macOS desktop screenshot workflows** needing clipboard input; users who value **production robustness** (timeouts, caps, typed errors, tests).
 - **Weakest fit for**: video analysis, huge dense screenshots needing zoom, Linux-only desktops, LAN shared deployment, no-API-key scenarios.
-- **Differentiators to lead with in the README**: dual protocol, capability-routing skill, URL-download retry, `reasoning_content` fallback. **Differentiators NOT to claim**: "zero dependencies" (currently relies on undeclared SDK+zod — fix before publishing), "unique skill" (luma-mcp has one too, though with different semantics).
+- **Differentiators to lead with in the README**: dual protocol, capability-routing skill, URL-download retry, `reasoning_content` fallback. **Differentiators NOT to claim**: "zero dependencies" (relies on `@modelcontextprotocol/sdk` + `zod`, declared in `package.json`), "unique skill" (luma-mcp has one too, though with different semantics).
 
 ---
 
